@@ -1,0 +1,44 @@
+<span class="badge badge-primary" style="position: absolute;top:-46px;left:473px;">{{number}}</span>
+
+<div class="py-4">
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
+                    <a href="http://localhost:20617/shop" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none border-bottom border-dark">
+                        <span class="fs-5 d-none d-sm-inline">Categories</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        {{#each cates}}
+                            
+                                <li class="nav-item">
+                                    <a href="http://localhost:20617/shop/{{CategoryID}}" class="nav-link align-middle px-0">
+                                        <span class="ms-1 d-none d-sm-inline">{{this.CategoryName}}</span>
+                                    </a>
+                                </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="container">
+                    <div class="row">
+                        {{#each listProduct}}
+                        <div class="col col-sm-6 col-lg-4 mb-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <p style="display: none;" class="id">{{ProductID}}</p> 
+                                    <p class="card-text"><b>Tên sản phẩm: </b>{{this.ProductName}}</p>
+                                    <p class="card-text"><b>Giá: </b>{{this.UnitPrice}}</p>
+                                    <a  class="btn btn-primary add-btn" href="http://localhost:20617/shop/">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

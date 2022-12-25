@@ -1,0 +1,16 @@
+ <div class="container">
+    <div class="row">
+        {{#each listProduct}}
+        <div class="col col-sm-6 col-lg-4 mb-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <p style="display: none;" class="id">{{this.ProductID}}</p> 
+                    <p class="card-text"><b>Tên sản phẩm: </b>{{this.ProductName}}</p>
+                    <p class="card-text"><b>Giá: </b>{{this.UnitPrice}}</p>
+                    <input  class="btn btn-primary input-num" value="{{this.number}}"/>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
